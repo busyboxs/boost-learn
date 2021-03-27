@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.8)
+
+find_package(Boost)
+if(Boost_FOUND)
+    message("include path: ${Boost_INCLUDE_DIRS}")
+    include_directories(${Boost_INCLUDE_DIRS})
+    add_executable(Convert "convert_example.cpp")
+    add_executable(Find "find_example.cpp")
+    add_executable(Predicate "predicate_example.cpp")
+    add_executable(Trim "trim_example.cpp")
+endif()
